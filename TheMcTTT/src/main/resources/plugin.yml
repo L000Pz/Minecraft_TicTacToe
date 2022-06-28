@@ -1,0 +1,17 @@
+name: TicTacToe
+version: '${project.version}'
+main: me.stormtrooper.tictactoe.TicTacToe
+api-version: 1.18
+commands:
+  tic-tac-toe:
+    description: will teleport the second player to you on accept.
+    usage: /<command> <p1> <p2>
+    aliases: [ttt , TTT]
+  accept:
+    description: accept player invitation.
+    usage: /<command>
+    aliases: [a , A]
+  deny:
+    description: deny player invitation.
+    usage: /<command>
+    aliases: [d , D];
