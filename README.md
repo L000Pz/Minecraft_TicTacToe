@@ -60,6 +60,8 @@ You can also load your game by using the /load command followed by your previous
 
 ## Author Info
 
+This plugin used the [TicTacToe](https://github.com/L000Pz/TicTacToe) repository as its base, feel free to use it.
+
 I would appreciate your comments on the code. I'm an amateur programmer and open to all opinions.😊
 
 - Twitter - [@L00Pz_](https://twitter.com/L00Pz_)
