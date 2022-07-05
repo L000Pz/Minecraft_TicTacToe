@@ -1,8 +1,8 @@
-package me.l00pz.tictactoe.tictactoe.Listeners;
+package me.stormtrooper.tictactoe.Listeners;
 
-import me.l00pz.tictactoe.tictactoe.TheGame.Result;
-import me.l00pz.tictactoe.tictactoe.commands.accept;
-import me.l00pz.tictactoe.tictactoe.TheGame.game;
+import me.stormtrooper.tictactoe.TheGame.Result;
+import me.stormtrooper.tictactoe.TheGame.game;
+import me.stormtrooper.tictactoe.commands.accept;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.event.EventHandler;
@@ -10,8 +10,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerQuitEvent;
 
 import java.sql.SQLException;
 import java.util.*;

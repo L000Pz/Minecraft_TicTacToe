@@ -1,6 +1,6 @@
-package me.l00pz.tictactoe.tictactoe.commands;
+package me.stormtrooper.tictactoe.commands;
 
-import me.l00pz.tictactoe.tictactoe.TheGame.Board;
+import me.stormtrooper.tictactoe.TheGame.Board;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -107,13 +107,17 @@ public class accept implements CommandExecutor, Listener {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player) {
-            p1 = Bukkit.getPlayerExact(tttCmd.getP1());
-            p2 = Bukkit.getPlayerExact(tttCmd.getP2());
-            if (p2 != null) {
-                createBoard(p1,p2);
-                tttCmd.setNumber(-1);
-            }else{
-                p1.sendMessage("Player is not online!");
+            try {
+                p1 = Bukkit.getPlayerExact(tttCmd.getP1());
+                p2 = Bukkit.getPlayerExact(tttCmd.getP2());
+                if (sender == p2) {
+                    if (!breaker.contains(p1.getUniqueId()) || !breaker.contains(p2.getUniqueId()) ) {
+                        createBoard(p1, p2);
+                        tttCmd.setNumber(-1);
+                    } else sender.sendMessage("You can't accept again man!");
+                }else sender.sendMessage("You can't accept someone else's game!");
+            } catch (IllegalArgumentException e) {
+                sender.sendMessage("No one challenged you!");
             }
         }
         return true;

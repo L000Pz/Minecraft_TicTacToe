@@ -1,4 +1,4 @@
-package me.l00pz.tictactoe.tictactoe.commands;
+package me.stormtrooper.tictactoe.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -10,19 +10,20 @@ public class deny implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player){
-            tttCmd.setNumber(-1);
-            Player p1 = Bukkit.getPlayerExact(tttCmd.getP1());
-            Player p2 = Bukkit.getPlayerExact(tttCmd.getP2());
-            p1.sendMessage(p2.getDisplayName() + " Is a coward !!");
-            p1.sendMessage("You've denied " + p2.getDisplayName() + " challenge!!");
-            accept.setP1(null);
-            accept.setP2(null);
-            tttCmd.setP1(null);
-            tttCmd.setP2(null);
-            accept.getBreaker().clear();
-            accept.getBoardLocation().clear();
-            accept.getBoardBlock().clear();
-
+            if (accept.getBreaker().contains(((Player) sender).getUniqueId())) {
+                tttCmd.setNumber(-1);
+                Player p1 = Bukkit.getPlayerExact(tttCmd.getP1());
+                Player p2 = Bukkit.getPlayerExact(tttCmd.getP2());
+                p1.sendMessage(p2.getDisplayName() + " Is a coward !!");
+                p1.sendMessage("You've denied " + p2.getDisplayName() + " challenge!!");
+                accept.setP1(null);
+                accept.setP2(null);
+                tttCmd.setP1(null);
+                tttCmd.setP2(null);
+                accept.getBreaker().clear();
+                accept.getBoardLocation().clear();
+                accept.getBoardBlock().clear();
+            }else sender.sendMessage("You can't deny that match");
         }
         return false;
     }

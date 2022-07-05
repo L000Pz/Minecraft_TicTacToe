@@ -1,19 +1,22 @@
-package me.l00pz.tictactoe.tictactoe;
+package me.stormtrooper.tictactoe;
 
 
-import me.l00pz.tictactoe.tictactoe.DB.DataBase;
-import me.l00pz.tictactoe.tictactoe.DB.Load;
-import me.l00pz.tictactoe.tictactoe.DB.Save;
-import me.l00pz.tictactoe.tictactoe.Listeners.Events;
-import me.l00pz.tictactoe.tictactoe.TheGame.game;
-import me.l00pz.tictactoe.tictactoe.commands.*;
+
+import me.stormtrooper.tictactoe.DB.DataBase;
+import me.stormtrooper.tictactoe.DB.Load;
+import me.stormtrooper.tictactoe.DB.Save;
+import me.stormtrooper.tictactoe.Listeners.Events;
+import me.stormtrooper.tictactoe.commands.Put;
+import me.stormtrooper.tictactoe.commands.accept;
+import me.stormtrooper.tictactoe.commands.deny;
+import me.stormtrooper.tictactoe.commands.tttCmd;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scheduler.BukkitTask;
+
 
 import java.sql.SQLException;
 
 
-public final class tictactoe extends JavaPlugin {
+public final class TicTacToe extends JavaPlugin {
 
     private DataBase dataBase;
     @Override

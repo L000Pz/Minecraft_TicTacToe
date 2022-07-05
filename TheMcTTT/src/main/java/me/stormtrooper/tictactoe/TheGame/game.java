@@ -1,9 +1,9 @@
-package me.l00pz.tictactoe.tictactoe.TheGame;
+package me.stormtrooper.tictactoe.TheGame;
 
-import me.l00pz.tictactoe.tictactoe.DB.DataBase;
-import me.l00pz.tictactoe.tictactoe.DB.Save;
-import me.l00pz.tictactoe.tictactoe.commands.accept;
-import me.l00pz.tictactoe.tictactoe.tictactoe;
+
+import me.stormtrooper.tictactoe.commands.accept;
+import me.stormtrooper.tictactoe.TicTacToe;
+import me.stormtrooper.tictactoe.commands.tttCmd;
 import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.entity.EntityType;
@@ -13,9 +13,6 @@ import org.bukkit.inventory.meta.FireworkMeta;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import java.sql.SQLException;
-
-import static org.bukkit.Bukkit.getServer;
 
 public class game {
     private static int ID = 0;
@@ -24,7 +21,7 @@ public class game {
     private static String winner = String.valueOf(Result.gameResult(accept.getBoard().getBoard()));
     private static int count;
     private static int number;
-    private static Plugin plugin = tictactoe.getPlugin(tictactoe.class);
+    private static Plugin plugin = TicTacToe.getPlugin(TicTacToe.class);
 
 
     public static int getCount() {
@@ -203,6 +200,9 @@ public class game {
         accept.getBoardLocation().clear();
         accept.setP1(null);
         accept.setP2(null);
+        tttCmd.setP1(null);
+        tttCmd.setP2(null);
+        accept.getBreaker().clear();
         count = 0;
         accept.getBoard().setBoard(null);
         accept.setBoard(null);

@@ -1,4 +1,4 @@
-package me.l00pz.tictactoe.tictactoe.TheGame;
+package me.stormtrooper.tictactoe.TheGame;
 
 public class Result {
     public static boolean check(int[][] board,int row, int col){

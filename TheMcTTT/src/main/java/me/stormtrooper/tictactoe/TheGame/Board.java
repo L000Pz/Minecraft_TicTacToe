@@ -1,4 +1,4 @@
-package me.l00pz.tictactoe.tictactoe.TheGame;
+package me.stormtrooper.tictactoe.TheGame;
 
 public class Board {
     private int[][] board = new int[3][3];

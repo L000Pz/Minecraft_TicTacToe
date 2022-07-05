@@ -1,4 +1,4 @@
-package me.l00pz.tictactoe.tictactoe.TheGame;
+package me.stormtrooper.tictactoe.TheGame;
 
 public class GameValues {
     private int gameNum;

@@ -1,10 +1,9 @@
-package me.l00pz.tictactoe.tictactoe.DB;
+package me.stormtrooper.tictactoe.DB;
 
-import me.l00pz.tictactoe.tictactoe.TheGame.Board;
-import me.l00pz.tictactoe.tictactoe.TheGame.GameValues;
-import me.l00pz.tictactoe.tictactoe.TheGame.Result;
-import me.l00pz.tictactoe.tictactoe.TheGame.game;
-import me.l00pz.tictactoe.tictactoe.commands.accept;
+import me.stormtrooper.tictactoe.TheGame.GameValues;
+import me.stormtrooper.tictactoe.TheGame.Result;
+import me.stormtrooper.tictactoe.TheGame.game;
+import me.stormtrooper.tictactoe.commands.accept;
 import org.bukkit.Bukkit;
 import org.bukkit.block.Block;
 import org.bukkit.command.Command;

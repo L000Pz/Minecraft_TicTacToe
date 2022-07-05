@@ -1,7 +1,7 @@
-package me.l00pz.tictactoe.tictactoe.commands;
+package me.stormtrooper.tictactoe.commands;
 
-import me.l00pz.tictactoe.tictactoe.TheGame.Result;
-import me.l00pz.tictactoe.tictactoe.TheGame.game;
+import me.stormtrooper.tictactoe.TheGame.Result;
+import me.stormtrooper.tictactoe.TheGame.game;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
