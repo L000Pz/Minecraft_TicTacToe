@@ -1,17 +1,29 @@
-name: TicTacToe
+name: tictactoe
 version: '${project.version}'
-main: me.stormtrooper.tictactoe.TicTacToe
+main: me.l00pz.tictactoe.tictactoe.tictactoe
 api-version: 1.18
 commands:
-  tic-tac-toe:
-    description: will teleport the second player to you on accept.
-    usage: /<command> <p1> <p2>
-    aliases: [ttt , TTT]
+  challenge:
+    description: starts tictactoe game
+    usage: /<command> <p2>
+    aliases: [ttt]
   accept:
-    description: accept player invitation.
+    description: accepts request
     usage: /<command>
-    aliases: [a , A]
+    aliases: [a]
   deny:
-    description: deny player invitation.
+    description: denies request
     usage: /<command>
-    aliases: [d , D];
+    aliases: [d]
+  put:
+    description: use this instead of touching the board
+    usage: /<command> <num>
+    aliases: [p]
+  save:
+    description: saves the game
+    usage: /<command> <gameNum>
+    aliases: [s]
+  load:
+    description: loads the game
+    usage: /<command> <gameNum>
+    aliases: [l]
