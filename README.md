@@ -1,6 +1,6 @@
 # TicTacToe
 
-> A simple plugin to play tic tac toe in Minecraft.
+> A simple plugin to play tic tac toe in Minecraft (Data base still under construction ...)
 
 ---
 
